@@ -1,0 +1,25 @@
+﻿<div class="col-md-12">
+    <div class="well bs-component">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Please select the type of accident you wish to report from the options listed below</legend>
+                <div class="form-group">
+                    <!--<label for="inputEmail" class="col-lg-2 control-label">Email</label>-->
+                    <div class="col-lg-10">
+                        <ul class="list-group" style="cursor:pointer">
+                            <li class="list-group-item" ng-repeat="cat in accidentCategories">
+                            <a ng-click="selectCategory(cat)">{{cat.Name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <!--<button type="submit" class="btn btn-primary">Next</button>-->
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+    </div>
+</div>

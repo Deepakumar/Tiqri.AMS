@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.DataAccessObject", "Tiqri.AMS.DataAccessObject\Tiqri.AMS.DataAccessObject.csproj", "{90C32D24-14B8-4A29-90AB-2B527E725218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.Model", "Tiqri.AMS.Model\Tiqri.AMS.Model.csproj", "{564FC132-65AF-470D-9356-6D07B39AFF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.Web", "Tiqri.AMS.Web\Tiqri.AMS.Web.csproj", "{4600CBE2-B148-4539-BD2D-2E1833A5F507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.BizObject", "Tiqri.AMS.BizObject\Tiqri.AMS.BizObject.csproj", "{1832F328-DF37-41EE-9335-7F8512B35123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.Common", "Tiqri.AMS.Common\Tiqri.AMS.Common.csproj", "{9B399C6E-559F-4492-8073-FD4E103E61F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tiqri.AMS.Test", "Tiqri.AMS.Test\Tiqri.AMS.Test.csproj", "{FE2C87ED-D591-4CF7-9A30-F08FF2C2BA54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C32D24-14B8-4A29-90AB-2B527E725218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C32D24-14B8-4A29-90AB-2B527E725218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C32D24-14B8-4A29-90AB-2B527E725218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C32D24-14B8-4A29-90AB-2B527E725218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564FC132-65AF-470D-9356-6D07B39AFF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564FC132-65AF-470D-9356-6D07B39AFF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564FC132-65AF-470D-9356-6D07B39AFF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564FC132-65AF-470D-9356-6D07B39AFF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4600CBE2-B148-4539-BD2D-2E1833A5F507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4600CBE2-B148-4539-BD2D-2E1833A5F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4600CBE2-B148-4539-BD2D-2E1833A5F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4600CBE2-B148-4539-BD2D-2E1833A5F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1832F328-DF37-41EE-9335-7F8512B35123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1832F328-DF37-41EE-9335-7F8512B35123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1832F328-DF37-41EE-9335-7F8512B35123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1832F328-DF37-41EE-9335-7F8512B35123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B399C6E-559F-4492-8073-FD4E103E61F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B399C6E-559F-4492-8073-FD4E103E61F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B399C6E-559F-4492-8073-FD4E103E61F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B399C6E-559F-4492-8073-FD4E103E61F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2C87ED-D591-4CF7-9A30-F08FF2C2BA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2C87ED-D591-4CF7-9A30-F08FF2C2BA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2C87ED-D591-4CF7-9A30-F08FF2C2BA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2C87ED-D591-4CF7-9A30-F08FF2C2BA54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

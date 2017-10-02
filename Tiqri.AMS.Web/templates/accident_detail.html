@@ -1,0 +1,104 @@
+﻿<div class="col-md-12">
+        <div class="well bs-component">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Location</legend>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Date</label>
+                        <div class="col-lg-10">
+                            <div class="col-md-2" style="padding-left:0 !important">
+                                <input class="datepicker form-control" data-date-format="mm/dd/yyyy">
+                            </div>
+                            <div class="col-md-1">
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="input-group bootstrap-timepicker timepicker" style="display:inline !important">
+                                    <div class="input-group bootstrap-timepicker timepicker"><input id="timepicker" class="form-control" data-provide="timepicker" data-template="modal" data-minute-step="1" data-modal-backdrop="true" type="text" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Location</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="location">
+                                <option>At these premises</option>
+                                <option>Elsewhere in the organization</option>
+                                <option>At Someone else's premises</option>
+                                <option>In a plublic place</option>
+                                <option>In Highway</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>The Person Involved</legend>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Type</label>
+                        <div class="col-lg-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-click="invPerStype(accident.invPerStype)" ng-model="accident.invPerStype" name="optionsRadios" id="optionsRadios1" value="1" checked="checked">
+                                    Employee
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-click="invPerStype(accident.invPerStype)" ng-model="accident.invPerStype" name="optionsRadios" id="optionsRadios2" value="2">
+                                    Short term contractor
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-click="invPerStype(accident.invPerStype)" ng-model="accident.invPerStype" name="optionsRadios" id="optionsRadios2" value="3">
+                                    Member of Public
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="employee" ng-show="!showInvPersonDetails">
+                        <label for="inputPassword" class="col-lg-2 control-label">Employee</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="location">
+                                <option>Employee</option>
+                                <option>Employee</option>
+                                <option>Employee</option>
+                                <option>Employee</option>
+                                <option>Employee</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="firstName" ng-show="showInvPersonDetails">
+                        <label for="firstName" class="col-lg-2 control-label">FirstName</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="firstName" placeholder="FirstName">
+                        </div>
+                    </div>
+                    <div class="form-group" id="lastName" ng-show="showInvPersonDetails">
+                        <label for="firstName" class="col-lg-2 control-label">LastName</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="firstName" placeholder="LastName">
+                        </div>
+                    </div>
+                </fieldset>
+            <fieldset>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button ui-sref="accident.history" type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="source-button"  class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+        </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.datepicker').datepicker({
+            format: 'mm/dd/yyyy',
+            startDate: '-3d'
+        });
+        var time = $('#timepicker').timepicker();
+    });
+</script>
