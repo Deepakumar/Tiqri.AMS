@@ -5,9 +5,9 @@
         titleId: 0,
         firstName: "",
         lastName: "",
-        date: "",
-        time: "",
-        locationTypeId: 0,
+        date: moment(new Date()).format("MM/DD/YYYY"),
+        time: moment(new Date()).format("hh:mm A"),
+        locationTypeId: 2,
         history:"",
         victims : []
     };
@@ -71,11 +71,11 @@
             $scope.validations.firstName.required = false;
         }
     }
-    $scope.addVictium = function (victim) {
-
+    $scope.addVictium = function (vicitumDetailForm,victim) {
         var employee, victimTypeName;
         if (victim.victimTypeId == 1) {
             victimTypeName = "Employee";
+            $scope.victiumRequired = false;
         }
         if (victim.victimTypeId == 2) {
             victimTypeName = "Short term contractor";
@@ -83,6 +83,7 @@
         if (victim.victimTypeId == 3) {
             victimTypeName = "Member of Public";
         }
+        debugger;
         if (victim.victimTypeId == 1) {
             var employee = _.findWhere($scope.employees, { ID: victim.employeeId.ID });
             $scope.accident.victims.push({
@@ -92,17 +93,25 @@
                 lastName: employee.LastName,
                 victimTypeName: victimTypeName
             });
+            clearVitiumDetails();
+            $('#victiumModel').modal('hide');
         }
         else {
-            $scope.accident.victims.push({
-                typeId: victim.victimTypeId,
-                employeeId: victim.employeeId.ID,
-                firstName: victim.firstName,
-                lastName: victim.lastName,
-                victimTypeName: victimTypeName
-            });
-        }
-        
+            if (!vicitumDetailForm.$valid) {
+                $scope.victiumRequired = vicitumDetailForm.$valid === false;
+            }
+            else {
+                $scope.accident.victims.push({
+                    typeId: victim.victimTypeId,
+                    employeeId: victim.employeeId.ID,
+                    firstName: victim.firstName,
+                    lastName: victim.lastName,
+                    victimTypeName: victimTypeName
+                });
+                clearVitiumDetails();
+                $('#victiumModel').modal('hide');
+            }
+        }      
     }
     $scope.submitVictimForm = function (isValid, victim) {
         if (isValid) {
@@ -121,5 +130,14 @@
     function (response) {
 
     });
+    }
+    function clearVitiumDetails(){
+        $scope.victim = {
+            victimTypeId: "1",
+            victimTypeName:"",
+            employeeId: 0,
+            firstName: "",
+            lastName: ""
+        };
     }
 });

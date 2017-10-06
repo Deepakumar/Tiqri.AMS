@@ -11,7 +11,7 @@ namespace Tiqri.AMS.Model.Enum
     public enum TypeOfLocation
     {
         [Display(Name = "At These Premises")]
-        [EnumMember(Value = "Awaiting Approval")]
+        [EnumMember(Value = "At These Premises")]
         AtThesePremises =1,
         [Display(Name = "Elsewhere In the Organization")]
         [EnumMember(Value = "Elsewhere In the Organization")]

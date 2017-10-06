@@ -2,7 +2,7 @@
         <div class="well bs-component">
             <form class="form-horizontal">
                 <fieldset>
-                    <legend>Location</legend>
+                    <legend>Location Detail</legend>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-2 control-label">Date</label>
                         <div class="col-lg-10">
@@ -24,7 +24,7 @@
                         <label for="inputPassword" class="col-lg-2 control-label">Location</label>
                         <div class="col-lg-10">
                             <select class="form-control" id="location" ng-model="accident.locationTypeId">
-                                <option value="1">At these premises</option>
+                                <option value="1" selected="selected">At these premises</option>
                                 <option value="2">Elsewhere in the organization</option>
                                 <option value="3">At Someone else's premises</option>
                                 <option value="4">In a plublic place</option>
@@ -91,7 +91,7 @@
                 <h4 class="modal-title">Victim Detail</h4>
             </div>
             <div class="modal-body well bs-component">
-                <form class="form-horizontal"> <!-- ng-submit="submitVictimForm(userForm.$valid,victim)"-->
+                <form class="form-horizontal" name="vicitumDetailForm"> 
                     <fieldset>
                         <legend>The Person Involved</legend>
                         <div class="form-group">
@@ -126,20 +126,23 @@
                         <div class="form-group" id="firstName" ng-show="showInvPersonDetails">
                             <label for="firstName" class="col-lg-2 control-label">FirstName</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="firstName" ng-model="victim.lastName">
+                                <input type="text" class="form-control" id="firstName" ng-model="victim.lastName" required>
                             </div>
                         </div>
                         <div class="form-group" id="lastName" ng-show="showInvPersonDetails">
                             <label for="firstName" class="col-lg-2 control-label">LastName</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="firstName" ng-model="victim.firstName">
+                                <input type="text" class="form-control" id="firstName" ng-model="victim.firstName" required>
                             </div>
+                        </div>
+                        <div class="form-group" ng-show="victiumRequired">
+                            <div class="alert alert-dismissible alert-danger">First name and Last name can not be empty</div>
                         </div>
                     </fieldset>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="addVictium(victim)">Add Victim</button>
+                <button type="button" class="btn btn-default" ng-click="addVictium(vicitumDetailForm,victim)">Add Victim</button>
             </div>
         </div>
     </div>

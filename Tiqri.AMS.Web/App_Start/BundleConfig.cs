@@ -24,7 +24,9 @@ namespace Tiqri.AMS.Web
                       "~/Scripts/jquery.dataTables.js",
                       "~/Scripts/bootstrap-datepicker.js",
                       "~/Scripts/bootstrap-timepicker.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/moment.js"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/angularlib").Include(
                       "~/Scripts/angular.js",
