@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.backgroundimg {
+    background-image: url(../Images/health-safety80.jpg);
+    background-position: top 100px;
+}

@@ -54,8 +54,11 @@ namespace Tiqri.AMS.Web
                       "~/Content/bootstrap-datepicker.css",
                       "~/Content/bootstrap-timepicker.css",
                       "~/Content/bootstrap-timepicker.css",
-                      "~/Content/dataTables.bootstrap.css"
+                      "~/Content/dataTables.bootstrap.css",
+                      "~/Content/Site.css"
                       ));
+
+            System.Web.Optimization.BundleTable.EnableOptimizations = false;
         }
     }
 }
