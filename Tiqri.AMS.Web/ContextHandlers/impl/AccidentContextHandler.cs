@@ -63,9 +63,9 @@ namespace Tiqri.AMS.Web.ContextHandlers.impl
                     {
                         AccidentID = item.ID.HasValue ? item.ID.Value : 0,
                         AccidentRefNo = !String.IsNullOrEmpty(item.ReferenceNo) ? item.ReferenceNo : "",
-                        Date = item.AccidentDate.Year > 1900 ? item.AccidentDate.ToShortTimeString() : "",
+                        Date = item.AccidentDate.Year > 1900 ? item.AccidentDate.ToShortDateString() : "",
                         Location = item.TypeOfLocation,
-                       // Reporter = GetUserName(item.ReporterID)
+                        Reporter = GetUserName(item.ReporterID)
                         
                     });
                 }

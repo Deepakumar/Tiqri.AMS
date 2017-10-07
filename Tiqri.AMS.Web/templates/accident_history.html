@@ -1,12 +1,12 @@
 ﻿<div class="col-md-12">
     <div class="well bs-component">
-        <form class="form-horizontal">
+        <form class="form-horizontal" name="accidentHistoryForm">
             <fieldset>
                 <legend>Accident History</legend>
                 <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Accident History</label>
                     <div class="col-lg-10">
-                        <textarea class="form-control" rows="5" cols="12" id="textArea" ng-model="accident.history"></textarea>
+                        <textarea class="form-control" rows="5" cols="12" id="textArea" ng-model="accident.history" required></textarea>
                         <span class="help-block">Enter full history of the accident here</span>
                     </div>
                 </div>
@@ -15,7 +15,7 @@
                         <button type="submit" ui-sref="accident.detail" class="btn btn-primary">Previous</button>
                     </div>
                     <div class="col-lg-1 col-lg-offset-10 pull-right">
-                        <button type="submit" class="btn btn-primary" ng-click="insert()">Submit</button>
+                        <button type="submit" class="btn btn-primary" ng-click="insert(accidentHistoryForm)">Submit</button>
                     </div>
                 </div>
             </fieldset>
