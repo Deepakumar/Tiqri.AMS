@@ -243,6 +243,7 @@
     <Content Include="Images\health-safety.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\health-safety30.jpg" />
     <Content Include="Images\health-safety50.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
