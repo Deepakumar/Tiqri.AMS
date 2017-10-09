@@ -130,7 +130,7 @@
             incAccResult.then(function (accRes) {
                 debugger;
                 $scope.regRefNo = accRes.Message;
-                $state.go('accident.registread');
+                $state.go('home');
             },
         function (response) {
 
